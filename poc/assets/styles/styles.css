@@ -28,7 +28,7 @@
   max-height: 150px;
   width: 10%;
   max-width: 10%;
-  overflow: scroll;
+  overflow-y: auto;
 
   cursor: move;
   cursor: grab;

@@ -41,3 +41,12 @@
   cursor: -moz-grabbing;
   cursor: -webkit-grabbing;
 }
+
+#header {
+  height: 80px;
+  text-align: center;
+}
+
+#header h1 {
+  line-height: 80px;
+}

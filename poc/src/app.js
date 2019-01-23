@@ -132,6 +132,7 @@ function initElements() {
 
   document.getElementById('pipe').innerHTML = elements;
 
+  window.pipeMaxLength = maxLength;
   changeItemHeight(maxLength);
 
   for (var j = 0; j < pipeData.length; j++) {

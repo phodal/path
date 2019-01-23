@@ -93,7 +93,7 @@ function changeItemHeight(maxLength) {
     itemHeight = 100;
   }
 
-  document.getElementById('pipe').style['min-width'] = 20 + maxLength * (itemHeight + 23) + 'px';
+  document.getElementById('pipe').style['min-width'] = 20 + maxLength * (itemHeight + 30) + 'px';
   var itemHeightPx = itemHeight + 'px';
   var containerHeight = itemHeight + 20 + 2 + 'px';
 

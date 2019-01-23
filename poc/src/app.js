@@ -25,11 +25,20 @@ function generateId(pipeData) {
 }
 
 function changeItemHeight(maxLength) {
-  var items = document.getElementsByClassName('editable');
+  var innerWidth = window.innerWidth;
+  var itemHeight = ((innerWidth - 100) / maxLength - 20);
+  var itemHeightPx = itemHeight + 'px';
+  var containerHeight = itemHeight + 20 + 2 + 'px';
 
-  for (var i = 0, len = items.length; i < len; i++) {
-    items[i].style["height"] = '150px';
-    items[i].style["width"] = '' + 100 / maxLength + '%';
+  var containers = document.getElementsByClassName('container');
+  for (var i = 0; i < containers.length; i++) {
+    containers[i].style["height"] = containerHeight;
+  }
+
+  var items = document.getElementsByClassName('editable');
+  for (var i = 0; i < items.length; i++) {
+    items[i].style["height"] = itemHeightPx;
+    items[i].style["width"] = itemHeightPx;
   }
 }
 

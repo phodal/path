@@ -87,8 +87,13 @@ function generateId(pipeData) {
 
 function changeItemHeight(maxLength) {
   var innerWidth = window.innerWidth;
-  document.getElementById('pipe').style['min-width'] = innerWidth + 'px';
+  // document.getElementById('pipe').style['min-width'] = innerWidth + 'px';
   var itemHeight = ((innerWidth - 100) / maxLength - 20);
+  if (itemHeight < 100) {
+    itemHeight = 100;
+  }
+
+  document.getElementById('pipe').style['min-width'] = 20 + maxLength * (itemHeight + 23) + 'px';
   var itemHeightPx = itemHeight + 'px';
   var containerHeight = itemHeight + 20 + 2 + 'px';
 

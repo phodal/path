@@ -1,9 +1,5 @@
-function initPipes() {
-  dragula([
-    document.getElementById('zone1'),
-    document.getElementById('zone2'),
-    document.getElementById('zone3')
-  ], {
+function initPipes(ids) {
+  dragula(ids, {
     direction: 'horizontal',
     moves: function (el, source, handle, sibling) {
       return true;
@@ -24,8 +20,53 @@ function initEditors() {
   var editor = new MediumEditor(elements);
 }
 
+function generateId(pipeData) {
+  return pipeData.toLocaleLowerCase();
+}
+
+function initElements() {
+  var ids = [];
+  var pipeData = [
+    {
+      id: 1,
+      title: 'Process',
+      items: [
+        '提交代码', 'PUSH Hooks', '运动持续集成', '部署到 Dev 环境', 'E2E 测试', '手动测试', '部署到 UAT 环境', '手工测试', '上线申请', '上线'
+      ]
+    },
+    {
+      id: 2,
+      title: 'Tools',
+      items: [
+        'Git & GitHub', 'Git', 'Jenkins', '', '', '', '', '', '', '', '', ''
+      ]
+    }
+  ];
+
+  var elements = '';
+  for (var i = 0; i < pipeData.length; i++) {
+    var id = generateId(pipeData[i].title);
+    var childItemId = id + '_child';
+    var currentHtml = "<div id='" + id + "' class='container'>";
+
+    for (var k = 0; k < pipeData[i].items.length; k++) {
+      currentHtml = currentHtml + '<div class="editable" id="' + childItemId + '">' + pipeData[i].items[k] + '</div>';
+    }
+    currentHtml = currentHtml + '</div>';
+    elements = elements + currentHtml;
+  }
+
+  document.getElementById('pipe').innerHTML = elements;
+
+  for (var j = 0; j < pipeData.length; j++) {
+    ids.push(document.getElementById(generateId(pipeData[j].title)));
+  }
+  return ids;
+}
+
 function init() {
-  initPipes();
+  var ids = initElements();
+  initPipes(ids);
   initEditors();
 }
 

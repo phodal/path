@@ -78,7 +78,10 @@ function initPipes(ids) {
 
 function initEditors() {
   var elements = document.querySelectorAll('.editable');
-  var editor = new MediumEditor(elements);
+  var editor = new MediumEditor(elements, {
+    placeholder: false
+
+  });
 }
 
 function generateId(pipeData) {

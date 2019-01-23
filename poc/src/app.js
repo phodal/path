@@ -49,18 +49,36 @@ function initElements() {
       id: 1,
       title: 'Process',
       items: [
-        '提交代码', 'PUSH Hooks', '运动持续集成', '部署到 Dev 环境', 'E2E 测试', '手动测试', '部署到 UAT 环境', '手工测试', '上线申请', '上线'
+        '提交代码', 'PUSH Hooks', '运行持续集成', '部署到 Dev 环境', 'E2E 测试', '手动测试', '部署到 UAT 环境', '手工测试', '上线申请', '上线'
+      ],
+      backgroundColor: '#00a300',
+      textColor: '#ffffff'
+    },
+    {
+      id: 2,
+      title: 'People',
+      items: [
+        ''
+      ],
+      backgroundColor: '#ff0097',
+      textColor: '#ffffff'
+    },
+    {
+      id: 3,
+      title: 'Tooling',
+      items: [
+        'Git & GitHub', 'Git', 'Jenkins', '', '', '', '', '', '', '', '', ''
       ],
       backgroundColor: '#99b433',
       textColor: '#ffffff'
     },
     {
-      id: 2,
-      title: 'Tools',
+      id: 4,
+      title: 'Artifacts',
       items: [
-        'Git & GitHub', 'Git', 'Jenkins', '', '', '', '', '', '', '', '', ''
+        'Code', '', 'Build Log', '', '', '', '', '', '', '', '', ''
       ],
-      backgroundColor: '#00a300',
+      backgroundColor: '#1e7145',
       textColor: '#ffffff'
     }
   ];

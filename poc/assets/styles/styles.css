@@ -24,10 +24,6 @@
 
 .container > div {
   display: inline-block;
-  height: 150px;
-  max-height: 150px;
-  width: 10%;
-  max-width: 10%;
   overflow-y: auto;
 
   cursor: move;
@@ -49,4 +45,59 @@
 
 #header h1 {
   line-height: 80px;
+}
+
+#color-green {
+  background-color: #00a300;
+}
+#color-greendark {
+  background-color: #1e7145;
+}
+#color-greenlight {
+  background-color: #99b433;
+}
+#color-magenta {
+  background-color: #ff0097;
+}
+#color-purplelight {
+  background-color: #9f00a7;
+}
+#color-purple {
+  background-color: #7e3878;
+}
+#color-purpledark {
+  background-color: #603cba;
+}
+#color-darken {
+  background-color: #1d1d1d;
+}
+#color-teal {
+  background-color: #00aba9;
+}
+#color-bluelight {
+  background-color: #eff4ff;
+}
+#color-blue {
+  background-color: #2d89ef;
+}
+#color-bluedark {
+  background-color: #2b5797;
+}
+#color-yellow {
+  background-color: #ffc40d;
+}
+#color-orange {
+  background-color: #e3a21a;
+}
+#color-orangedark {
+  background-color: #da532c;
+}
+#color-red {
+  background-color: #b91d47;
+}
+#color-redlight {
+  background-color: #ee1111;
+}
+#color-white {
+  background-color: #fff;
 }

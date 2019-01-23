@@ -1,4 +1,4 @@
-function init() {
+function initPipes() {
   dragula([
     document.getElementById('zone1'),
     document.getElementById('zone2'),
@@ -17,10 +17,16 @@ function init() {
   }).on('out', function (el, container) {
     container.className = container.className.replace('ex-over', '');
   });
+}
 
+function initEditors() {
+  var elements = document.querySelectorAll('.editable');
+  var editor = new MediumEditor(elements);
+}
 
-  var elements = document.querySelectorAll('.editable'),
-    editor = new MediumEditor(elements);
+function init() {
+  initPipes();
+  initEditors();
 }
 
 init();

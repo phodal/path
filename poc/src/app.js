@@ -56,6 +56,11 @@ function updateContainerPipeData(source) {
   localStorage.setItem('ptop.pipe', JSON.stringify(window.pipeData));
 }
 
+function updateItemData(pipeIndex, itemIndex, value) {
+  window.pipeData[pipeIndex].items[itemIndex] = value;
+  localStorage.setItem('ptop.pipe', JSON.stringify(window.pipeData));
+}
+
 function initPipes(ids) {
   dragula(ids, {
     direction: 'horizontal',
@@ -82,7 +87,10 @@ function initEditor(elementId) {
     placeholder: false
   });
   editor.subscribe('editableInput', function (event, editable) {
-    console.log(event, editable, editable.id);
+    var itemInfo = editable.id.split('_');
+    var pipeIndex = parseInt(itemInfo[1]) - 1;
+    var itemIndex = parseInt(itemInfo[3]);
+    updateItemData(pipeIndex, itemIndex, editable.textContent);
   });
 }
 

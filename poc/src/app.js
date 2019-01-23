@@ -169,6 +169,10 @@ function init() {
   var ids = initElements();
   initPipes(ids);
   bindElementsEvent();
+
+  window.onresize = function () {
+    changeItemHeight(window.pipeMaxLength);
+  }
 }
 
 init();

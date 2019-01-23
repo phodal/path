@@ -26,12 +26,14 @@ function generateId(pipeData) {
 
 function changeItemHeight(maxLength) {
   var innerWidth = window.innerWidth;
+  document.getElementById('pipe').style['min-width'] = innerWidth + 'px';
   var itemHeight = ((innerWidth - 100) / maxLength - 20);
   var itemHeightPx = itemHeight + 'px';
   var containerHeight = itemHeight + 20 + 2 + 'px';
 
   var containers = document.getElementsByClassName('container');
   for (var i = 0; i < containers.length; i++) {
+    containers[i].style["min-width"] = 'calc(' + innerWidth - 100 + ')px';
     containers[i].style["height"] = containerHeight;
   }
 

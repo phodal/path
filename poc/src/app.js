@@ -76,12 +76,27 @@ function initPipes(ids) {
   });
 }
 
-function initEditors() {
-  var elements = document.querySelectorAll('.editable');
+function initEditor(elementId) {
+  var elements = document.getElementById(elementId);
   var editor = new MediumEditor(elements, {
     placeholder: false
-
   });
+  editor.subscribe('editableInput', function (event, editable) {
+    console.log(event, editable, editable.id);
+  });
+}
+
+function bindElementsEvent() {
+  for (var i = 0; i < pipeData.length; i++) {
+    var id = generateId(pipeData[i].id);
+    var itemLength = pipeData[i].items.length;
+    for (var k = 0; k < itemLength; k++) {
+      var childItemId = id + '_child' + '_' + k;
+      document.getElementById(childItemId).addEventListener('click', function (event) {
+        initEditor(event.target.id);
+      })
+    }
+  }
 }
 
 function generateId(pipeData) {
@@ -128,6 +143,7 @@ function initElements() {
 
     var itemLength = pipeData[i].items.length;
     for (var k = 0; k < itemLength; k++) {
+      childItemId = id + '_child' + '_' + k;
       currentHtml = currentHtml + '<div class="editable" id="' + childItemId + '">' + pipeData[i].items[k] + '</div>';
     }
     currentHtml = currentHtml + '</div>';
@@ -152,7 +168,7 @@ function initElements() {
 function init() {
   var ids = initElements();
   initPipes(ids);
-  initEditors();
+  bindElementsEvent();
 }
 
 init();

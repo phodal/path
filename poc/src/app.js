@@ -21,7 +21,7 @@ var pipeData = [
     id: 3,
     title: 'Tooling',
     items: [
-      'Git & GitHub', 'Git', 'Jenkins', '', '', '', '', '', '', '', '', ''
+      'Git & GitHub', 'Git', 'Jenkins', '', '', '', '', ''
     ],
     backgroundColor: '#99b433',
     textColor: '#ffffff'
@@ -30,7 +30,7 @@ var pipeData = [
     id: 4,
     title: 'Artifacts',
     items: [
-      'Code', '', 'Build Log', '', '', '', '', '', '', '', '', ''
+      'Code', '', 'Build Log', '', '', '', '', '', '', ''
     ],
     backgroundColor: '#1e7145',
     textColor: '#ffffff'

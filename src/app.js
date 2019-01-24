@@ -206,6 +206,28 @@ function onAddItem() {
   window.location.reload(false);
 }
 
+
+function removeLastItem(items) {
+  for (var i = 0; i < items.length; i++) {
+    for (var j = 0; j <= window.pipeMaxLength; j++) {
+      if (j > window.pipeMaxLength - 1) {
+        items[i].items.splice(-1, 1);
+      }
+    }
+  }
+
+  return items;
+}
+
+
+function onRemoveLastItem() {
+  window.pipeMaxLength--;
+  window.pipeData = removeLastItem(window.pipeData);
+
+  localStorage.setItem('ptop.pipe', JSON.stringify(window.pipeData));
+  window.location.reload(false);
+}
+
 function initElements() {
   var ids = [];
   var items = localStorage.getItem('ptop.pipe');

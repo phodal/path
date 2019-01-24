@@ -87,7 +87,13 @@
 .download {
   top: 3.0rem;
   position: absolute;
-  right: 15rem;
+  right: 35rem;
+}
+
+.remove-column {
+  top: 3.0rem;
+  position: absolute;
+  right: 18rem;
 }
 
 #color-green {

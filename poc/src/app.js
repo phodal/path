@@ -161,11 +161,11 @@ function fillArray(items) {
   }
   window.pipeMaxLength = maxLength;
 
-  for (var i = 0; i < items.length; i++) {
-    var itemLength = items[i].items.length;
+  for (var j = 0; j < items.length; j++) {
+    var itemLength = items[j].items.length;
     for (var j = 0; j <= window.pipeMaxLength; j++) {
       if (j > itemLength) {
-        items[i].items[j - 1] = '';
+        items[j].items[j - 1] = '';
       }
     }
   }

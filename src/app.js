@@ -86,10 +86,6 @@ function initPipes(ids) {
       return true;
     },
     accepts: function (el, target, source, sibling) {
-      if (target.id && source.id) {
-        console.log(source.id, source.id);
-
-      }
       return source.id === target.id;
     },
   }).on('drag', function (el) {
@@ -203,11 +199,9 @@ function setEmptyClass(title) {
 }
 
 function onAddItem() {
-  console.log("saf");
   window.pipeMaxLength++;
-  console.log(window.pipeData, window.pipeData);
   window.pipeData = fillArrayWithEmpty(window.pipeData);
-  console.log(window.pipeData, window.pipeData);
+
   localStorage.setItem('ptop.pipe', JSON.stringify(window.pipeData));
   window.location.reload(false);
 }

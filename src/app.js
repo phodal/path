@@ -34,6 +34,24 @@ var pipeData = [
     ],
     backgroundColor: '#1e7145',
     textColor: '#ffffff'
+  },
+  {
+    id: 5,
+    title: 'Pain',
+    items: [
+      ''
+    ],
+    backgroundColor: '#00aba9',
+    textColor: '#ffffff'
+  },
+  {
+    id: 6,
+    title: 'Duration',
+    items: [
+      ''
+    ],
+    backgroundColor: '#ffc40d',
+    textColor: '#ffffff'
   }
 ];
 

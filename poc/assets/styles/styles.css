@@ -68,12 +68,8 @@
   left: 20px;
 }
 
-.pipe-header {
-  height: 170px;
-}
-
 .pipe-header h2 {
-  line-height: 170px;
+  margin-top: calc(50% - 3.2rem);
 }
 
 #color-green {

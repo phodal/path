@@ -132,6 +132,11 @@ function changeItemHeight(maxLength) {
     items[i].style["height"] = itemHeightPx;
     items[i].style["width"] = itemHeightPx;
   }
+
+  var headers = document.getElementsByClassName('pipe-header');
+  for (var i = 0; i < headers.length; i++) {
+    headers[i].style["height"] =  itemHeight + 20 + 14 + 'px';
+  }
 }
 
 function initElements() {

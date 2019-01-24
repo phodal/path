@@ -133,14 +133,14 @@ function changeItemHeight(maxLength) {
   }
 
   var items = document.getElementsByClassName('editable');
-  for (var i = 0; i < items.length; i++) {
-    items[i].style["height"] = itemHeightPx;
-    items[i].style["width"] = itemHeightPx;
+  for (var j = 0; j < items.length; j++) {
+    items[j].style["height"] = itemHeightPx;
+    items[j].style["width"] = itemHeightPx;
   }
 
   var headers = document.getElementsByClassName('pipe-header');
-  for (var i = 0; i < headers.length; i++) {
-    headers[i].style["height"] = itemWidth + 20 + 14 + 'px';
+  for (var k = 0; k < headers.length; k++) {
+    headers[k].style["height"] = itemWidth + 20 + 14 + 'px';
   }
 }
 

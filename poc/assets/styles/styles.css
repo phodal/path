@@ -1,17 +1,20 @@
-.container {
-  padding: 0;
-
+#pipe {
   position: relative;
-  left: 0;
   float: right;
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: calc(100% - 98px);
+  width: calc(100% - 198px);
   max-width: 100%;
   height: 180px;
+}
+
+.container {
+  padding: 0;
   margin-right: 6px;
   margin-top: 12px;
 
+  background-color: rgba(255, 255, 255, 0.2);
+  max-width: 100%;
+  width: 100%;
   color: #fff;
   line-height: 1.3em;
   border: 1px dashed #fff;

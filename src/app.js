@@ -259,4 +259,11 @@ function init() {
   }
 }
 
+function downloadFile() {
+  domtoimage.toPng(document.getElementById('pipe'))
+    .then(function (blob) {
+      window.saveAs(blob, 'path-to-production.png');
+    });
+}
+
 init();

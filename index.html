@@ -11,23 +11,28 @@
   <link rel="stylesheet" href="assets/styles/styles.css">
   <script src="assets/dragula.min.js"></script>
   <script src="assets/medium-editor.min.js"></script>
+  <script src="assets/dom-to-image.min.js"></script>
+  <script src="assets/FileSaver.min.js"></script>
 </head>
 <body>
 
+<button class="download" onclick="return downloadFile()">Download</button>
+<button class="add-item" onclick="return onAddItem()">ADD</button>
+
 <div id="header">
   <h1>Path To Production</h1>
-  <button class="add-item" onclick="return onAddItem()">添加列</button>
 </div>
 
-<div class="path">
-  <div id="pipe-header">
+<div id="page">
+  <div class="path">
+    <div id="pipe-header">
 
-  </div>
-  <div class='wrapper' id="pipe">
+    </div>
+    <div class='wrapper' id="pipe">
 
+    </div>
   </div>
 </div>
-
 <script src="src/app.js"></script>
 </body>
 </html>

@@ -84,6 +84,12 @@
   right: 4rem;
 }
 
+.download {
+  top: 3.0rem;
+  position: absolute;
+  right: 15rem;
+}
+
 #color-green {
   background-color: #00a300;
 }

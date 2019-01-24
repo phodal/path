@@ -125,8 +125,8 @@ function generateId(pipeData) {
 
 function changeItemHeight(maxLength) {
   var innerWidth = window.innerWidth;
-  var itemWidth = ((innerWidth - 100) / maxLength - 20);
-  if (itemWidth < 100 || itemWidth > 130) {
+  var itemWidth = ((innerWidth - 200) / maxLength - 20);
+  if (itemWidth < 100) {
     itemWidth = 100;
   }
 
@@ -135,7 +135,7 @@ function changeItemHeight(maxLength) {
 
   var containers = document.getElementsByClassName('container');
   for (var i = 0; i < containers.length; i++) {
-    containers[i].style["min-width"] = maxLength * (itemWidth + 22) + 'px';
+    containers[i].style["min-width"] = maxLength * (itemWidth + 21) + 'px';
     containers[i].style["height"] = containerHeight;
   }
 
@@ -170,7 +170,6 @@ function fillArray(items) {
     }
   }
 
-  console.log(items);
   return items;
 }
 

@@ -91,6 +91,11 @@ function initEditor(elementId) {
     var pipeIndex = parseInt(itemInfo[1]) - 1;
     var itemIndex = parseInt(itemInfo[3]);
     updateItemData(pipeIndex, itemIndex, editable.textContent);
+    if (editable.textContent) {
+      editable.classList.remove('empty');
+    } else {
+      editable.classList.add('empty');
+    }
   });
 }
 
@@ -148,6 +153,13 @@ function initElements() {
   var maxLength = pipeData[0].items.length;
   var elements = '';
   var headers = '';
+
+  function getEmpty(title) {
+    if (!title) {
+      return 'empty'
+    }
+  }
+
   for (var i = 0; i < pipeData.length; i++) {
     var id = generateId(pipeData[i].id);
     var childItemId = id + '_child';
@@ -157,7 +169,7 @@ function initElements() {
     var itemLength = pipeData[i].items.length;
     for (var k = 0; k < itemLength; k++) {
       childItemId = id + '_child' + '_' + k;
-      currentHtml = currentHtml + '<div class="editable" id="' + childItemId + '">' + pipeData[i].items[k] + '</div>';
+      currentHtml = `${currentHtml}<div class="editable ${getEmpty(pipeData[i].items[k])}" id="${childItemId}">${pipeData[i].items[k]}</div>`;
     }
     currentHtml = currentHtml + '</div>';
     elements = elements + currentHtml;

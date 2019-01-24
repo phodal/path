@@ -38,6 +38,10 @@
   transition: opacity 0.4s ease-in-out;
 }
 
+.container > div.empty {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 .container > div {
   display: inline-block;
   overflow-y: auto;

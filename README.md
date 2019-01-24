@@ -12,6 +12,13 @@ Screenshots
 ![Path To Production](./docs/path-to-production.png)
 
 
+## related Tech Lead tools
+
+ - [TechStack](https://github.com/phodal/techstack) - A Radar for Projects' Toolbox
+ - [ADR](https://github.com/phodal/adr) - Architecture Decision Records in Node.js with Reporter, supported Windows, GNU/Linux, macOS.
+ - [TLA](https://github.com/phodal/tla) - Tech Lead Assessments Radar
+ - [Path](https://github.com/phodal/path) - Path To Production
+
 License
 ---
 

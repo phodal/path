@@ -7,6 +7,13 @@ Features:
  - Editable Content
  - Dynamic Columns
 
+Tech Stack:
+
+ - Dragular, dragable elements
+ - FileSaver, donwload file
+ - Medium Editor, editor
+ - DOM TO IMAGE, covert dom into images
+
 Screenshots
 
 ![Path To Production](./docs/path-to-production.png)

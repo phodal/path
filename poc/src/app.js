@@ -147,7 +147,7 @@ function initElements() {
     var id = generateId(pipeData[i].id);
     var childItemId = id + '_child';
     var currentHtml = `<div id='${id}' class='container' style='background:${pipeData[i].backgroundColor};color:${pipeData[i].textColor}'>`;
-    headers = headers + `<div class='pipe-header' id='${id}_header'>${pipeData[i].title}</div>`;
+    headers = headers + `<div class='pipe-header' id='${id}_header'><h2>${pipeData[i].title}</h2></div>`;
 
     var itemLength = pipeData[i].items.length;
     for (var k = 0; k < itemLength; k++) {

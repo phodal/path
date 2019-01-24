@@ -2,7 +2,7 @@
   position: relative;
   float: right;
   display: inline-block;
-  width: calc(100% - 198px);
+  width: calc(100% - 138px);
   max-width: 100%;
   height: 180px;
 }
@@ -61,6 +61,19 @@
 
 #header h1 {
   line-height: 80px;
+}
+
+#pipe-header {
+  position: absolute;
+  left: 20px;
+}
+
+.pipe-header {
+  height: 170px;
+}
+
+.pipe-header h2 {
+  line-height: 170px;
 }
 
 #color-green {

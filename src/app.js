@@ -3,7 +3,7 @@ var pipeData = [
     id: 1,
     title: 'Process',
     items: [
-      '提交代码', 'PUSH Hooks', '运行持续集成', '部署到 Dev 环境', 'E2E 测试', '手动测试', '部署到 UAT 环境', '手工测试', '上线申请', '上线'
+      'Commit Code', 'PUSH Hooks', 'RUN CI', 'Deploy Dev', 'E2E Test', 'Manual Test', 'Deploy UAT', 'Manual Test', 'Go-Live Apply', 'Go-Live'
     ],
     backgroundColor: '#00a300',
     textColor: '#ffffff'

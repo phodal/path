@@ -151,16 +151,7 @@ function changeItemHeight(maxLength) {
   }
 }
 
-function fillArray(items) {
-  var maxLength = items[0].items.length;
-  for (var i = 0; i < items.length; i++) {
-    var itemLength = pipeData[i].items.length;
-    if (itemLength > maxLength) {
-      maxLength = itemLength;
-    }
-  }
-  window.pipeMaxLength = maxLength;
-
+function fillArrayWithEmpty(items) {
   for (var i = 0; i < items.length; i++) {
     var itemLength = items[i].items.length;
     for (var j = 0; j <= window.pipeMaxLength; j++) {
@@ -170,7 +161,20 @@ function fillArray(items) {
     }
   }
 
-  console.log(items);
+  return items;
+}
+
+function fillArray(items) {
+  var maxLength = items[0].items.length;
+  for (var i = 0; i < items.length; i++) {
+    var itemLength = pipeData[i].items.length;
+    if (itemLength > maxLength) {
+      maxLength = itemLength;
+    }
+  }
+  window.pipeMaxLength = maxLength;
+  items = fillArrayWithEmpty(items);
+
   return items;
 }
 
@@ -178,6 +182,16 @@ function setEmptyClass(title) {
   if (!title) {
     return 'empty'
   }
+}
+
+function onAddItem() {
+  console.log("saf");
+  window.pipeMaxLength++;
+  console.log(window.pipeData, window.pipeData);
+  window.pipeData = fillArrayWithEmpty(window.pipeData);
+  console.log(window.pipeData, window.pipeData);
+  localStorage.setItem('ptop.pipe', JSON.stringify(window.pipeData));
+  window.location.reload(false);
 }
 
 function initElements() {
@@ -189,7 +203,7 @@ function initElements() {
   var elements = '';
   var headers = '';
 
-  pipeData = fillArray(pipeData);
+  window.pipeData = pipeData = fillArray(pipeData);
 
   for (var i = 0; i < pipeData.length; i++) {
     var id = generateId(pipeData[i].id);

@@ -78,6 +78,12 @@
   top: calc(50% - 1.6rem);
 }
 
+.add-item {
+  top: 3.0rem;
+  position: absolute;
+  right: 4rem;
+}
+
 #color-green {
   background-color: #00a300;
 }

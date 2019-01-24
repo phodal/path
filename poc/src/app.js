@@ -67,6 +67,13 @@ function initPipes(ids) {
     moves: function (el, source, handle, sibling) {
       return true;
     },
+    accepts: function (el, target, source, sibling) {
+      if (target.id && source.id) {
+        console.log(source.id, source.id);
+
+      }
+      return source.id === target.id;
+    },
   }).on('drag', function (el) {
     el.className = el.className.replace('ex-moved', '');
   }).on('drop', function (el, container, handle) {

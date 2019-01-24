@@ -147,7 +147,7 @@ function changeItemHeight(maxLength) {
 
   var headers = document.getElementsByClassName('pipe-header');
   for (var k = 0; k < headers.length; k++) {
-    headers[k].style["height"] = itemWidth + 20 + 14 + 'px';
+    headers[k].style["height"] = itemWidth + 20 + 12 + 'px';
   }
 }
 
@@ -161,16 +161,23 @@ function fillArray(items) {
   }
   window.pipeMaxLength = maxLength;
 
-  for (var j = 0; j < items.length; j++) {
-    var itemLength = items[j].items.length;
+  for (var i = 0; i < items.length; i++) {
+    var itemLength = items[i].items.length;
     for (var j = 0; j <= window.pipeMaxLength; j++) {
       if (j > itemLength) {
-        items[j].items[j - 1] = '';
+        items[i].items[j - 1] = '';
       }
     }
   }
 
+  console.log(items);
   return items;
+}
+
+function setEmptyClass(title) {
+  if (!title) {
+    return 'empty'
+  }
 }
 
 function initElements() {
@@ -181,12 +188,6 @@ function initElements() {
   }
   var elements = '';
   var headers = '';
-
-  function getEmpty(title) {
-    if (!title) {
-      return 'empty'
-    }
-  }
 
   pipeData = fillArray(pipeData);
 
@@ -199,7 +200,7 @@ function initElements() {
     var itemLength = pipeData[i].items.length;
     for (var k = 0; k < itemLength; k++) {
       childItemId = id + '_child' + '_' + k;
-      currentHtml = `${currentHtml}<div class="editable ${getEmpty(pipeData[i].items[k])}" id="${childItemId}">${pipeData[i].items[k]}</div>`;
+      currentHtml = `${currentHtml}<div class="editable ${setEmptyClass(pipeData[i].items[k])}" id="${childItemId}">${pipeData[i].items[k]}</div>`;
     }
     currentHtml = currentHtml + '</div>';
     elements = elements + currentHtml;

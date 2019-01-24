@@ -74,7 +74,8 @@
 }
 
 .pipe-header h2 {
-  margin-top: calc(50% - 3.2rem);
+  position: relative;
+  top: calc(50% - 1.6rem);
 }
 
 #color-green {
